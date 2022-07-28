@@ -37,3 +37,7 @@ a:hover {
   transition: color 0.4s;
   cursor: pointer;
 }
+
+.cursor {
+  cursor: pointer;
+}

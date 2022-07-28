@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React, { useCallback, useRef } from 'react';
 import ReactCanvasConfetti from 'react-canvas-confetti';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 const canvasStyles = {
   position: 'fixed',
@@ -74,7 +75,15 @@ export default function Header() {
       <header>
         <nav className='container'>
           <h1>
-            <Link href='/'>Home</Link>
+            <Link href='/'>
+              <Image
+                src='/logo.png'
+                alt='Logo'
+                width='300px'
+                height='22px'
+                class='cursor'
+              ></Image>
+            </Link>
           </h1>
           <span className='header__description'>
             On-demand{' '}
