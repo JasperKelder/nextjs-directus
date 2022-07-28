@@ -2,12 +2,20 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First add .env with the Directus credentials.
 
 ```bash
-npm run dev
+Quickstart:
+npm i && npm run build && npm run start
 # or
-yarn dev
+Build the app:
+npm run build
+# or
+Start the app:
+npm run start
+# or
+Run the development server:
+npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
