@@ -81,12 +81,12 @@ export default function Header() {
                 alt='Logo'
                 width='300px'
                 height='22px'
-                class='cursor'
+                className='cursor'
               ></Image>
             </Link>
           </h1>
           <span className='header__description'>
-            On-demand{' '}
+            On-Demand{' '}
             <a className='accent' onClick={() => revalidate()}>
               ISR
             </a>

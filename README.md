@@ -7,13 +7,19 @@ First add .env with the Directus credentials.
 ```bash
 Quickstart:
 npm i && npm run build && npm run start
+
 # or
+
 Build the app:
 npm run build
+
 # or
+
 Start the app:
 npm run start
+
 # or
+
 Run the development server:
 npm run dev
 ```
