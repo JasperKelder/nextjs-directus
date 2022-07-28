@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import React, { useCallback, useRef } from 'react';
 import ReactCanvasConfetti from 'react-canvas-confetti';
+import { useRouter } from 'next/router';
 
 const canvasStyles = {
   position: 'fixed',
@@ -12,6 +13,8 @@ const canvasStyles = {
 };
 
 export default function Header() {
+  const router = useRouter();
+
   const refAnimationInstance = useRef(null);
 
   const getInstance = useCallback(instance => {
@@ -56,9 +59,14 @@ export default function Header() {
     });
   }, [makeShot]);
 
+  function reload() {
+    router.reload(window.location.pathname);
+  }
+
   function revalidate() {
     fetch('/api/revalidate');
     confetti();
+    setTimeout(reload, 400);
   }
 
   return (
@@ -71,7 +79,6 @@ export default function Header() {
           <span className='header__description'>
             On-demand{' '}
             <a className='accent' onClick={() => revalidate()}>
-              {/* <a className='accent' onClick={confetti}> */}
               ISR
             </a>
             , powered by{' '}
