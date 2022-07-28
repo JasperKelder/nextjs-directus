@@ -4,6 +4,10 @@
   --orange: #ff6600;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   padding: 0;
@@ -11,13 +15,13 @@ body {
   font-family: sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 header {
